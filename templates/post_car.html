@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta 
+            name="viewport"
+            content="width=device-width, user-scale=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content="firefox">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/add_car.css') }}">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="{{ url_for('static', filename='js/post_car.js') }}"></script>
+        <title>Cars</title>
+    </head>
+    <body>
+        <header>
+            <h1>Добавление автомобиля</h1>
+        </header>
+        <body>
+            <main>
+                <form role="form">
+                    <label for="firm">Фирма:</label>
+                    <input type="text" id="firm" name="txt_firm"/>
+                    <label for="model">Модель:</label>
+                    <input type="text" id="model" name="txt_model"/>
+                    <label for="year">Г. В.:</label>
+                    <input type="number" id="year" name="txt_year"/>
+                    <label for="power">Мощность:</label>
+                    <input type="number" id="power" name="txt_power"/>
+                    <label for="color">Цвет:</label>
+                    <input type="text" id="color" name="txt_color"/>
+                    <label for="price">Цена:</label>
+                    <input type="number" id="price" name="txt_price"/>
+                    <label for="delaer">ID дилера:</label>
+                    <input type="number" id="dealer" name="txt_dealer"/>
+                    <button id='submit_btn' type="button">Добавить автомобиль</button>
+                </form>
+            </main>
+        </body>
+    </body>
+</html>

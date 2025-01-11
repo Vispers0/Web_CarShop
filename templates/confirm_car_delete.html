@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta 
+            name="viewport"
+            content="width=device-width, user-scale=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content="firefox">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/edit_car.css') }}">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="{{ url_for('static', filename='js/delete_car.js') }}"></script>
+        <title>Cars</title>
+    </head>
+    <body>
+        <header>
+            <div id="title-container">
+                <h1>
+                    Удаление автомобиля
+                </h1>
+            </div>
+        </header>
+        <main>
+            <div id="main-container">
+                Вы уверены, что хотите удалить этот автомобиль?
+            </div>
+            <div id="main-container">
+                <form role="form">
+                    <input id="car_id" type="text" value="{{ car_id }}"/>
+                    <div id="main-container">
+                        <button id="btn_yes" class="answer-btn" type="button">Да</button>
+                        <button id="btn_no" class="answer-btn" type="button">Нет</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <form method="get", action="/">
+                    <input type="submit" value="Назад"/>
+                </form>
+            </div>
+        </footer>
+    </body>
+</html>

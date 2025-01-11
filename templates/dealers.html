@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta 
+            name="viewport"
+            content="width=device-width, user-scale=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content="firefox">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/dealers.css') }}">
+        <title>Delaers</title>
+    </head>
+    <body>
+        <header>
+            <div class="header-container">
+                <h1>
+                    Список дилеров
+                </h1>
+            </div>
+        </header>
+        <main>
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            {% for header in headers %}
+                            <th>{{ header }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in tableData %}
+                            <tr>
+                                <td>{{ row['id'] }}</td>
+                                <td>{{ row['name'] }}</td>
+                                <td>{{ row['city'] }}</td>
+                                <td>{{ row['address'] }}</td>
+                                <td>{{ row['area'] }}</td>
+                                <td>{{ row['rating'] }}</td>
+                                <td>
+                                    <form method="get", action="/dealers/about/{{ row['id'] }}">
+                                        <input type="submit" value="Посмотреть автомобили"/>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form method="get", action="/dealers/add/{{ row['id'] }}">
+                                        <input type="submit" value="Доавить автомобиль"/>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form method="get", action="/dealers/delete/{{ row['id'] }}">
+                                        <input type="submit" value="Удалить автомобиль"/>
+                                    </form>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <form method="get", action="/">
+                    <input type="submit" value="Назад"/>
+                </form>
+            </div>
+        </footer>
+    </body>
+</html>

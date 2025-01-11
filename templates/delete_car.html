@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta 
+            name="viewport"
+            content="width=device-width, user-scale=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content="firefox">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/add_car.css') }}">
+        <title>Cars</title>
+    </head>
+    <body>
+        <header>
+            <h1>Удаление автомобиля</h1>
+        </header>
+        <body>
+            <main>
+                <form method="post", action="/dealers/delete/{{ dealer_id }}">
+                    <label for="car_id">ID автомобиля:</label>
+                    <input type="number" id="car_id" name="txt_car_id"/>
+                    <input id="submit_btn" type="submit" value="Удалить автомобиль"/>
+                </form>
+            </main>
+        </body>
+    </body>
+</html>

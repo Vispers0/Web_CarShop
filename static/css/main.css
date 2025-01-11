@@ -1,0 +1,32 @@
+body {
+    background-color: aquamarine;
+}
+
+.main-container {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+}
+
+.form-container {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin: 20px 0px 0px 0px;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3em;
+}
+
+input {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    height: 150%;
+}
+
+form {
+    justify-content: center;
+    display: flex;
+}

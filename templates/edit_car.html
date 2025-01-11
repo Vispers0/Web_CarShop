@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta 
+            name="viewport"
+            content="width=device-width, user-scale=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content="firefox">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/edit_car.css') }}">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="{{ url_for('static', filename='js/put_car.js') }}"></script>
+        <title>Edit car</title>
+    </head>
+    <body>
+        <header>
+            <div id="title-container">
+                <h1>
+                    Изменение автомобиля
+                </h1>
+            </div>
+        </header>
+        <main>
+            <div id="main-container">
+                <form role="form">
+                    <input id="car_id" type="text" value="{{ car_id }}"/>
+                    <label for="field">Выберите поле, которое хотите изменить</label>
+                    <select id="field" name="field">
+                        <option value="firm">Фирма</option>
+                        <option value="model">Модель</option>
+                        <option value="year">Год</option>
+                        <option value="power">Мощность</option>
+                        <option value="color">Цвет</option>
+                        <option value="price">Цена</option>
+                        <option value="dealer">ID дилера</option>
+                    </select>
+                    <label for="val">Новое значение</label>
+                    <input type="text" id="val" name="val"/>
+                    <button id="submit_btn" type="button">Изменить</button>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <form method="get", action="/">
+                    <input type="submit" value="Назад"/>
+                </form>
+            </div>
+        </footer>
+    </body>
+</html>

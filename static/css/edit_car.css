@@ -1,0 +1,59 @@
+#title-container {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+#main-container {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+form {
+    justify-content: center;
+    width: 100%;
+    display: grid;
+}
+
+label {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+input, select {
+    padding: 3px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+#submit_btn {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.answer-btn {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+#btn_no {
+    margin-left: 40px;
+}
+
+.footer-container {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+}
+
+#car_id {
+    visibility: collapse;
+}

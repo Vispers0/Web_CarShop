@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta 
+            name="viewport"
+            content="width=device-width, user-scale=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content="firefox">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <title>Car Shop</title>
+    </head>
+    <body>
+        <header>
+            <div class="main-container">
+                <h1>Работа с таблицей дилеров</h1>
+            </div>
+        </header>
+        <main>
+            <div class="form-container">
+                <form method="get" action="/table/dealers/post">
+                    <input type="submit" value="Добавить дилера"/>
+                </form>
+            </div>
+            <div class="form-container">
+                <form method="get" action="/table/dealers/list">
+                    <input type="submit" name="edit" value="Изменить запись дилера"/>
+                </form>
+            </div>
+            <div class="form-container">
+                <form method="get" action="/table/dealers/list/True">
+                    <input type="submit" name="delete" value="Удалить дилера"/>
+                </form>
+            </div>
+            <div class="form-container">
+                <form method="get" action="/">
+                    <input type="submit" value="Назад"/>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

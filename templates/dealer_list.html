@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta 
+            name="viewport"
+            content="width=device-width, user-scale=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content="firefox">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/cars.css') }}">
+        <title>Dealers</title>
+    </head>
+    <body>
+        <header>
+            <div class="header-container">
+                <h1>
+                    Список дилеров
+                </h1>
+            </div>
+        </header>
+        <main>
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            {% for header in headers %}
+                            <th>{{ header }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in tableData %}
+                            <tr>
+                                <td>{{ row['id'] }}</td>
+                                <td>{{ row['name'] }}</td>
+                                <td>{{ row['city'] }}</td>
+                                <td>{{ row['address'] }}</td>
+                                <td>{{ row['area'] }}</td>
+                                <td>{{ row['rating'] }}</td>
+                                <td>
+                                    {% if delete == False %}
+                                    <form method="get", action="/table/dealers/put/{{ row['id'] }}">
+                                        <input id="change_btn" type="submit" value="Изменить"/>
+                                    </form>
+                                    {% else %}
+                                    <form method="get", action="/table/dealers/delete/{{ row['id'] }}">
+                                        <input id="delete_btn" type="submit" value="Удалить"/>
+                                    </form>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <form method="get", action="/">
+                    <input type="submit" value="Назад"/>
+                </form>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta 
+            name="viewport"
+            content="width=device-width, user-scale=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content="firefox">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/add_car.css') }}">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="{{ url_for('static', filename='js/post_dealer.js') }}"></script>
+        <title>Cars</title>
+    </head>
+    <body>
+        <header>
+            <h1>Добавление дилера</h1>
+        </header>
+        <body>
+            <main>
+                <form role="form">
+                    <label for="name">Название:</label>
+                    <input type="text" id="name" name="txt_name"/>
+                    <label for="city">Город:</label>
+                    <input type="text" id="city" name="txt_city"/>
+                    <label for="address">Адрес:</label>
+                    <input type="text" id="address" name="txt_address"/>
+                    <label for="area">Округ:</label>
+                    <input type="text" id="area" name="txt_area"/>
+                    <label for="rating">Рейтинг:</label>
+                    <input type="number" id="rating" name="txt_rating"/>
+                    <button id='submit_btn' type="button">Добавить дилера</button>
+                </form>
+            </main>
+        </body>
+    </body>
+</html>
